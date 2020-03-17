@@ -1,0 +1,23 @@
+
+
+### Send POST request with json body
+POST https://spring-function-vilz3brbpa-uc.a.run.app
+Content-Type: text/plain
+
+Name
+
+###
+
+### Send POST request with json body
+POST https://spring-function-vilz3brbpa-uc.a.run.app/reverse
+Content-Type: text/plain
+
+Javier gomez
+
+###
+
+
+GET https://spring-function-vilz3brbpa-uc.a.run.app/time
+
+
+###

@@ -1,0 +1,13 @@
+#create an docker image locally
+gradle jibDockerBuild --image=spring-function:v1
+
+#create image and set it to directly to google registry (need configuration)
+gradle jib
+
+
+----------
+docker-compose build
+
+docker tag quarkus-gcp-cloud-run_rest-lambda gcr.io/ut-265822/quarkus-rest-lambda:v3
+
+docker push gcr.io/ut-265822/quarkus-rest-lambda:v3

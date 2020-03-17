@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  spring-app:
+    image: spring-function:v1
+    container_name: spring-function
+    ports:
+      - 8080:8080
