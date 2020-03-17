@@ -10,10 +10,30 @@ Content-Type: application/json
 ###
 
 # curl -H "Content-Type: text/plain" localhost:8080/uppercase -d Hello
-POST localhost:8080/upperCase
+POST localhost:8080/uppercase
 Content-Type: text/plain
 
 Hello
 
 ###
 
+GET localhost:8080/time
+
+###
+
+# curl -H "Content-Type: text/plain" localhost:8080/uppercase -d Hello
+POST localhost:8080/reverse
+Content-Type: text/plain
+
+Hello
+
+###
+
+# this is how you invoke the spring.cloud.function.definition
+
+POST localhost:8080
+Content-Type: text/plain
+
+hola pepe lower
+
+###
