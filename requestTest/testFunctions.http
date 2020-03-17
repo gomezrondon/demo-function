@@ -4,7 +4,7 @@
 POST https://spring-function-vilz3brbpa-uc.a.run.app
 Content-Type: text/plain
 
-Name
+Javier gomez
 
 ###
 
@@ -21,3 +21,14 @@ GET https://spring-function-vilz3brbpa-uc.a.run.app/time
 
 
 ###
+
+GET http://localhost:8080/time
+
+
+###
+
+GET http://localhost:8080/gettime2
+
+
+###
+
