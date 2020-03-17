@@ -1,0 +1,19 @@
+### Send POST request with json body
+POST http://localhost:8080/upperCaseName
+Content-Type: application/json
+
+{
+
+  "name": "javier gomez"
+}
+
+###
+
+# curl -H "Content-Type: text/plain" localhost:8080/uppercase -d Hello
+POST localhost:8080/upperCase
+Content-Type: text/plain
+
+Hello
+
+###
+

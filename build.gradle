@@ -1,43 +1,39 @@
-buildscript {
-	ext {
-		springBootVersion = '2.0.0.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+plugins {
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
 }
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
 }
 
-
 ext {
-	springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+	set('springCloudVersion', "Hoxton.SR3")
 }
 
 dependencies {
 
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-function-web', version: '1.0.0.M1'
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	//implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    //https://cloud.spring.io/spring-cloud-function/reference/html/spring-cloud-function.html
+	implementation 'org.springframework.cloud:spring-cloud-starter-function-web:3.0.3.RELEASE'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 }
 
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
+}
+
+test {
+	useJUnitPlatform()
 }
