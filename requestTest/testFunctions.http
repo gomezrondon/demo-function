@@ -32,3 +32,8 @@ GET http://localhost:8080/gettime2
 
 ###
 
+GET http://localhost:8080/getcars
+
+
+###
+
